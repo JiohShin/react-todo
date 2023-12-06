@@ -1,7 +1,15 @@
+// import { useState } from "react";
+import TodoTemplate from "./components/TodoTemplate";
+import TodoInsert from "./components/TodoInsert";
+import TodoList from "./components/TodoList";
+
 function App() {
   return (
     <div className="App">
-      <h1>TODO LIST</h1>
+      <TodoTemplate>
+        <TodoInsert />
+        <TodoList />
+      </TodoTemplate>
     </div>
   );
 }
