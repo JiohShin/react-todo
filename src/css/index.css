@@ -1,0 +1,95 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.TodoTemplate {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: lightpink;
+	border-radius: 20px;
+	padding: 20px 35px;
+}
+.todo-header {
+	margin-bottom: 20px;
+}
+.todo-header .title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.TodoInsert {
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+input[type="text"] {
+	padding: 4px 6px;
+	border-bottom: 1px solid black;
+	color: black;
+	font-size: 15px;
+	font-weight: 400;
+}
+input[type="text"]::placeholder {
+	color: black;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.TodoListItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+input[type="checkbox"]{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+input[type="checkbox"] + label{
+	display: inline-block;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+	font-size: 14px;
+}
+input[type="checkbox"] + label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid blue;
+}
+input[type="checkbox"]:checked + label::after{
+	content:'✔';
+	color: blue;
+	font-size: 12px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.delete-btn {
+	font-size: 12px;
+	font-weight: 700;
+	color: red;
+}
